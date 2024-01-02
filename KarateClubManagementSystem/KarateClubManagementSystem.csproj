@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{734C5380-2847-424C-9B3D-6ED832A4C8FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KarateClub</RootNamespace>
+    <AssemblyName>KarateClub</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginMode\MemberMode\frmMemberBeltTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberBeltTests.Designer.cs">
+      <DependentUpon>frmMemberBeltTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberInstructors.Designer.cs">
+      <DependentUpon>frmMemberInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberPayments.Designer.cs">
+      <DependentUpon>frmMemberPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberSubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberSubscriptions.Designer.cs">
+      <DependentUpon>frmMemberSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\frmAccessDenied.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\frmAccessDenied.Designer.cs">
+      <DependentUpon>frmAccessDenied.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberLogin.Designer.cs">
+      <DependentUpon>frmMemberLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\frmUserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\frmUserLogin.Designer.cs">
+      <DependentUpon>frmUserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\GlobalMember.cs" />
+    <Compile Include="LoginMode\UserMode\GlobalUser.cs" />
+    <Compile Include="LoginMode\MemberMode\frmMemberHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\MemberMode\frmMemberHome.Designer.cs">
+      <DependentUpon>frmMemberHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmAddBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmAddBeltRank.Designer.cs">
+      <DependentUpon>frmAddBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmBeltRanksList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmBeltRanksList.Designer.cs">
+      <DependentUpon>frmBeltRanksList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmDeleteBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmDeleteBeltRank.Designer.cs">
+      <DependentUpon>frmDeleteBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmFindBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmFindBeltRank.Designer.cs">
+      <DependentUpon>frmFindBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmManageBeltRanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmManageBeltRanks.Designer.cs">
+      <DependentUpon>frmManageBeltRanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmUpdateBeltRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltRanks\frmUpdateBeltRank.Designer.cs">
+      <DependentUpon>frmUpdateBeltRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmAddBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmAddBeltTest.Designer.cs">
+      <DependentUpon>frmAddBeltTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmBeltTestsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmBeltTestsList.Designer.cs">
+      <DependentUpon>frmBeltTestsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmDeleteBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmDeleteBeltTest.Designer.cs">
+      <DependentUpon>frmDeleteBeltTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmFindBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmFindBeltTest.Designer.cs">
+      <DependentUpon>frmFindBeltTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmManageBeltTests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmManageBeltTests.Designer.cs">
+      <DependentUpon>frmManageBeltTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmUpdateBeltTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageBeltTests\frmUpdateBeltTest.Designer.cs">
+      <DependentUpon>frmUpdateBeltTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmAddInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmAddInstructor.Designer.cs">
+      <DependentUpon>frmAddInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmDeleteInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmDeleteInstructor.Designer.cs">
+      <DependentUpon>frmDeleteInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmFindInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmFindInstructor.Designer.cs">
+      <DependentUpon>frmFindInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmInstructorsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmInstructorsList.Designer.cs">
+      <DependentUpon>frmInstructorsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmManageInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmManageInstructors.Designer.cs">
+      <DependentUpon>frmManageInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmUpdateInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageInstructors\frmUpdateInstructor.Designer.cs">
+      <DependentUpon>frmUpdateInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmAddMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmAddMemberInstructor.Designer.cs">
+      <DependentUpon>frmAddMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmDeleteMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmDeleteMemberInstructor.Designer.cs">
+      <DependentUpon>frmDeleteMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmFindMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmFindMemberInstructor.Designer.cs">
+      <DependentUpon>frmFindMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmManageMemberInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmManageMemberInstructors.Designer.cs">
+      <DependentUpon>frmManageMemberInstructors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmMemberInstructorsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmMemberInstructorsList.Designer.cs">
+      <DependentUpon>frmMemberInstructorsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmUpdateMemberInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMemberInstructors\frmUpdateMemberInstructor.Designer.cs">
+      <DependentUpon>frmUpdateMemberInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmAddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmAddMember.Designer.cs">
+      <DependentUpon>frmAddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\Main\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\Main\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmDeleteMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmDeleteMember.Designer.cs">
+      <DependentUpon>frmDeleteMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\Main\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\Main\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmFindMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmFindMember.Designer.cs">
+      <DependentUpon>frmFindMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmManageMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmManageMembers.Designer.cs">
+      <DependentUpon>frmManageMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmMembersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmMembersList.Designer.cs">
+      <DependentUpon>frmMembersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageMembers\frmUpdateMember.Designer.cs">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmAddPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmAddPayment.Designer.cs">
+      <DependentUpon>frmAddPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmDeletePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmDeletePayment.Designer.cs">
+      <DependentUpon>frmDeletePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmFindPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmFindPayment.Designer.cs">
+      <DependentUpon>frmFindPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmManagePayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmManagePayments.Designer.cs">
+      <DependentUpon>frmManagePayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmPaymentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmPaymentsList.Designer.cs">
+      <DependentUpon>frmPaymentsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmUpdatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManagePayments\frmUpdatePayment.Designer.cs">
+      <DependentUpon>frmUpdatePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmAddSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmAddSubscription.Designer.cs">
+      <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmDeleteSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmDeleteSubscription.Designer.cs">
+      <DependentUpon>frmDeleteSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmFindSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmFindSubscription.Designer.cs">
+      <DependentUpon>frmFindSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmManageSubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmManageSubscriptions.Designer.cs">
+      <DependentUpon>frmManageSubscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmSubscriptionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmSubscriptionsList.Designer.cs">
+      <DependentUpon>frmSubscriptionsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmUpdateSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageSubscriptions\frmUpdateSubscription.Designer.cs">
+      <DependentUpon>frmUpdateSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmDeleteUser.Designer.cs">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmFindUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmFindUser.Designer.cs">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmUpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmUpdateUser.Designer.cs">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmUsersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMode\UserMode\ManageUsers\frmUsersList.Designer.cs">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberBeltTests.resx">
+      <DependentUpon>frmMemberBeltTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberInstructors.resx">
+      <DependentUpon>frmMemberInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberPayments.resx">
+      <DependentUpon>frmMemberPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberSubscriptions.resx">
+      <DependentUpon>frmMemberSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\frmAccessDenied.resx">
+      <DependentUpon>frmAccessDenied.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberLogin.resx">
+      <DependentUpon>frmMemberLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\frmUserLogin.resx">
+      <DependentUpon>frmUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\MemberMode\frmMemberHome.resx">
+      <DependentUpon>frmMemberHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmAddBeltRank.resx">
+      <DependentUpon>frmAddBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmBeltRanksList.resx">
+      <DependentUpon>frmBeltRanksList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmDeleteBeltRank.resx">
+      <DependentUpon>frmDeleteBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmFindBeltRank.resx">
+      <DependentUpon>frmFindBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmManageBeltRanks.resx">
+      <DependentUpon>frmManageBeltRanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltRanks\frmUpdateBeltRank.resx">
+      <DependentUpon>frmUpdateBeltRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmAddBeltTest.resx">
+      <DependentUpon>frmAddBeltTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmBeltTestsList.resx">
+      <DependentUpon>frmBeltTestsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmDeleteBeltTest.resx">
+      <DependentUpon>frmDeleteBeltTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmFindBeltTest.resx">
+      <DependentUpon>frmFindBeltTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmManageBeltTests.resx">
+      <DependentUpon>frmManageBeltTests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageBeltTests\frmUpdateBeltTest.resx">
+      <DependentUpon>frmUpdateBeltTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmAddInstructor.resx">
+      <DependentUpon>frmAddInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmDeleteInstructor.resx">
+      <DependentUpon>frmDeleteInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmFindInstructor.resx">
+      <DependentUpon>frmFindInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmInstructorsList.resx">
+      <DependentUpon>frmInstructorsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmManageInstructors.resx">
+      <DependentUpon>frmManageInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageInstructors\frmUpdateInstructor.resx">
+      <DependentUpon>frmUpdateInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmAddMemberInstructor.resx">
+      <DependentUpon>frmAddMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmDeleteMemberInstructor.resx">
+      <DependentUpon>frmDeleteMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmFindMemberInstructor.resx">
+      <DependentUpon>frmFindMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmManageMemberInstructors.resx">
+      <DependentUpon>frmManageMemberInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmMemberInstructorsList.resx">
+      <DependentUpon>frmMemberInstructorsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMemberInstructors\frmUpdateMemberInstructor.resx">
+      <DependentUpon>frmUpdateMemberInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmAddMember.resx">
+      <DependentUpon>frmAddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\Main\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmDeleteMember.resx">
+      <DependentUpon>frmDeleteMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\Main\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmFindMember.resx">
+      <DependentUpon>frmFindMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmManageMembers.resx">
+      <DependentUpon>frmManageMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmMembersList.resx">
+      <DependentUpon>frmMembersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageMembers\frmUpdateMember.resx">
+      <DependentUpon>frmUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmAddPayment.resx">
+      <DependentUpon>frmAddPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmDeletePayment.resx">
+      <DependentUpon>frmDeletePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmFindPayment.resx">
+      <DependentUpon>frmFindPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmManagePayments.resx">
+      <DependentUpon>frmManagePayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmPaymentsList.resx">
+      <DependentUpon>frmPaymentsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManagePayments\frmUpdatePayment.resx">
+      <DependentUpon>frmUpdatePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmAddSubscription.resx">
+      <DependentUpon>frmAddSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmDeleteSubscription.resx">
+      <DependentUpon>frmDeleteSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmFindSubscription.resx">
+      <DependentUpon>frmFindSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmManageSubscriptions.resx">
+      <DependentUpon>frmManageSubscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmSubscriptionsList.resx">
+      <DependentUpon>frmSubscriptionsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageSubscriptions\frmUpdateSubscription.resx">
+      <DependentUpon>frmUpdateSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmDeleteUser.resx">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmFindUser.resx">
+      <DependentUpon>frmFindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmUpdateUser.resx">
+      <DependentUpon>frmUpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMode\UserMode\ManageUsers\frmUsersList.resx">
+      <DependentUpon>frmUsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kimono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\martial-arts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searching.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searching %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searching %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_a-boy-in-taekwondo-uniform_9202155-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karate %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instructor %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Belts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KarateClubBusinessLayer\KarateClubBusinessLayer.csproj">
+      <Project>{94e692d4-e964-484d-891b-b94c06f65522}</Project>
+      <Name>KarateClubBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\user %286%29.png" />
+    <None Include="Resources\karateMan-removebg-preview1.png" />
+    <None Include="Resources\danger.png" />
+    <None Include="Resources\karateMan-removebg-preview.png" />
+    <None Include="Resources\Personajes_deportivos_taekwondo_player___Vector_Premium-removebg-preview.png" />
+    <None Include="Resources\exclamation-mark.png" />
+    <None Include="Resources\close %281%29.png" />
+    <None Include="Resources\5982925_35296-removebg-preview.png" />
+    <None Include="Resources\8463908-removebg-preview.png" />
+    <Content Include="Resources\BeltRanksImages\BlackBelt.png" />
+    <Content Include="Resources\BeltRanksImages\BlueBelt.png" />
+    <Content Include="Resources\BeltRanksImages\BrownBelt.png" />
+    <Content Include="Resources\BeltRanksImages\GreenBelt.png" />
+    <Content Include="Resources\BeltRanksImages\OrangeBelt.png" />
+    <Content Include="Resources\BeltRanksImages\PurpleBelt.png" />
+    <Content Include="Resources\BeltRanksImages\question.png" />
+    <Content Include="Resources\BeltRanksImages\RedBelt.png" />
+    <Content Include="Resources\BeltRanksImages\WhiteBelt.png" />
+    <Content Include="Resources\BeltRanksImages\YellowBelt.png" />
+    <None Include="Resources\close-button.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\drop-down-menu %281%29.png" />
+    <None Include="Resources\paying.png" />
+    <None Include="Resources\drop-down-menu.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
